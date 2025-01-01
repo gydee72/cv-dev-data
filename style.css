@@ -15,8 +15,125 @@ body { background-color: #000; color: #FFF; font-family: Arial, sans-serif; marg
 	margin-bottom: 200px;
 
 }
+.tcv1{
+	text-align: center;
+}
+.btncv{
+	
+
+	display: flex;
+	 align-items: center; /* Centre verticalement */ 
+	 justify-content: center; /* Centre horizontalement */ 
+	 width: 200px; 
+	 height: 80px; 
+	 background-color: #007bff; color: white; 
+	 border: none; 
+	 border-radius: 5px;
+}
+/*anim*/
+/*p{
+  text-transform: uppercase
+}*/
+.anim{
+	display: flex;
+	/*min-height: 100vh;*/
+	align-items: center;
+	justify-content: center;
+}
+.small{
+  animation: linear 15s rotate infinite
+}
+.medium{
+  animation: linear 30s rotate reverse infinite
+}
+  
+@keyframes rotate{
+  from{
+    transform: rotateZ(0deg)
+  }
+  to{
+    transform: rotateZ(360deg)
+}
+}
+
+
+
+/*effet glitch sur texte*/
+
+
+h1:hover{
+	opacity: 0.9;
+	text-shadow: 0px -5px #ec2225, 0px 5px #00c2cb, -5px 0px #ec2225, 5px 0px #00c2cb;
+  }
+  h1::before{
+	content: attr(h1adb);
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #e0ffff;
+	z-index: -1;
+  }
+  h1:hover::before{
+	animation: animate 12ms ease-in-out infinite;
+	z-index: 1;
+  }
+  @keyframes animate{
+	0%, 100%{
+	  top: -7px;
+	  left: 0;
+	  opacity: 1;
+	}
+	20%{
+	  top: 0;
+	  left: -10px;
+	  opacity: 0.7;
+	}
+	40%{
+	  top: 7px;
+	  left: 0;
+	  opacity: 0.2;
+	}
+	60%{
+	  top: 0;
+	  left: 10px;
+	  opacity: 0.3;
+	}
+	80%{
+	  top: 0;
+	  left: 0;
+	  opacity: 0.9;
+	}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fin effet glitch*/
+
 .folio_mgt{
 	padding-top:30px;
+}
+.h1adb{
+	font-size: 4rem;
 }
 
 .subtitle{
